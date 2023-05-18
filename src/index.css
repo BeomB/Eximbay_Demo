@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+
+.logo_area img{
+  width: 80%;
+  height: 70%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav_area
+{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.nav_area .link
+{
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #1d1f28;
+  text-decoration: none;
+  font-size: 14px;
+  height: 100%;
+  font-weight: 600;
+  margin-right: 30px;
+}
+
+.accordion-body input
+{
+  font-size: 12px;
+}
+
+.accordion-body .form-label
+{
+  font-size: 16px;
+}
+
+.accordion-button 
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+
+.title{
+  font-family: 'Average Sans', sans-serif;
+  font-weight: bold;
+}
+
+#root{
+  font-family: 'Roboto', sans-serif;
+}
+
+#fgkey{
+  margin-left: 1%;
+  size: 100px;
+  color: coral;
+  font-weight: 900;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.main b{
+  color: red;
+}
+
+.header{
+  display: flex;
+  color : white;
+  margin-left: 30px;
+  height: 60px;
+  border-bottom: 0.8px solid #c5c3c3;
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  white-space: nowrap;
+}
+
+.header div{
+  display: inline;
+  margin-top: 1%;
+}
+.nav_area
+{
+  margin-top: 0%;
+}
+
+.left{
+  width: 250px;
+  height: 3000px;
+  float: left;
+  border-right: 0.8px solid #c5c3c3;
+}
+
+.form{
+  padding-left: 3%;
+  width: 30%;
+  float: left;
+}
+
+.preview{
+  margin-top: 9.4%;
+  width: 50%;
+  float: right;
+
+}
+
+.json_preview{
+  background-color: #f5ffff;
+  padding: 3%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 540;
+  color: #06163d
+}
+
+
+#essential
+{
+  color: #336cfa
+}
+
+#objectName
+{
+  font-weight: bold;
 }
