@@ -237,22 +237,7 @@ const Payment = () => {
     setShowModal(false)
   }
 
-  const objectCopy = () => {
 
-    let copyText = JSON.stringify({
-      fgkey,
-      payment,
-      merchant,
-      url,
-      buyer,
-      tax,
-      other_param,
-      product,
-      surcharge,
-      settings
-    }, null, 2)
-    navigator.clipboard.writeText(copyText);
-  }
 
   const ObjectPreview = () => {
     setShowModal(!showModal)
@@ -280,8 +265,8 @@ const Payment = () => {
             <h2 className="title">결제</h2><br />
             <Button style={{ marginRight: "10px" }} onClick={ready}>fgkey 생성</Button>
             <Button style={{ marginRight: "10px" }} onClick={callSDK}>SDK 호출</Button>
-            <Button style={{ marginRight: "10px" }} id="objectPreview" onClick={ObjectPreview}> 미리보기 </Button>
-            <Button style={{ marginRight: "10px" }} id="objectCopy" onClick={objectCopy}> Json 복사 </Button><br /><br />
+            <Button style={{ marginRight: "10px" }} id="objectPreview" onClick={ObjectPreview}> 미리보기 </Button> <br/><br/>
+            
 
 
             {/** ------------- TEST or REAL ------------ **/}

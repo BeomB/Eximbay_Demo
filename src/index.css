@@ -10,7 +10,7 @@
 
 .right
 {
-  margin-top: 16.5%;
+  margin-top: 13.5%;
   padding-right: 5%;
   float: left;
   width: 50%;
@@ -150,9 +150,15 @@ body{
 }
 
 
-.Modal {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #61dafb;
-  text-align: left;
+
+.ReactModal__Content
+{
+  font-size: 12px;
+  width: 800px;
+  height: 800px;
+  color :#071025;
+  border-radius: 20px !important;
+  background-color: #ffffff !important;
+  
+  
 }
