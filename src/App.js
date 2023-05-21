@@ -8,7 +8,7 @@ import Confirm from './pages/Confirm'
 import Verify from './pages/Verify'
 import Retrieve from './pages/Retrieve'
 import Header from './pages/layout/Header'
-import Left from './pages/layout/Left'
+
 import Payment from './pages/Payment'
 import Iframe from './pages/Iframe'
 import SdkButton from './pages/SdkButton'
@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <Header></Header>
-      {/* <Left></Left> */}
+
       <Routes>                                              {/** Route를 이용하여 경로 별 Component 설정**/}
         <Route path='/demo/' element={<Payment />} />
         <Route path='/demo/ready' element={<Ready />} />         {/*결제 준비 API DEMO*/}

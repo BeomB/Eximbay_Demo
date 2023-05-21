@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
 
+.left
+{
+  padding-left: 5%;
+  float: left;
+  width: 50%;
+  padding-right: 3%;
+}
+
+.right
+{
+  margin-top: 16.5%;
+  padding-right: 5%;
+  float: left;
+  width: 50%;
+  padding-left: 3%;
+}
+
+
 body{
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -9,8 +27,6 @@ body{
   background-color: coral;
   color: #ffffff;
   border-color: rgb(255, 118, 14);
-  margin-top: 1%;
-  margin-right: 5px;
 }
 
 .logo_area img{
@@ -83,38 +99,34 @@ body{
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
   white-space: nowrap;
-  margin-bottom: 3%;
 }
 
 .header div{
   display: inline;
   margin-top: 1%;
 }
-.nav_area
+/* .nav_area
 {
   margin-top: 0%;
-}
+} */
 
-.left{
+/* .left{
   width: 250px;
   height: 3000px;
   float: left;
   border-right: 0.8px solid #c5c3c3;
-}
+} */
 
 .form{
-  padding-left: 15%;
-  margin-right: 60px;
-  width: 45%;
-  float: left;
+  margin-top: 3%;
+  /* padding-left: 15%; */
+  /* margin-right: 60px; */
+  /* float: left; */
 }
 
 .preview{
-  margin-top: 6%;
-  width: 50%;
-  float: right;
+  /* margin-top: 6%; */
   color: rgb(0, 0, 0);
-
 }
 
 .json_preview pre{
@@ -135,4 +147,12 @@ body{
 #objectName
 {
   font-weight: bold;
+}
+
+
+.Modal {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #61dafb;
+  text-align: left;
 }
