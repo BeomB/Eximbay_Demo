@@ -68,7 +68,7 @@ const Payment = () => {
   }
 
   const [merchant, setMerchant] = useState(() => ({
-    mid: "3474153615"
+    mid: "1849705C64"
   }))
 
   const merchantValueHandler = (e) => {
@@ -226,6 +226,7 @@ const Payment = () => {
   }
 
   const objectCopy = () => {
+
     let copyText = JSON.stringify({
       fgkey,
       payment,
@@ -238,7 +239,7 @@ const Payment = () => {
       surcharge,
       settings
     }, null, 2)
-    navigator.clipboard.writeText(copyText)
+    navigator.clipboard.writeText(copyText);
   }
 
 
