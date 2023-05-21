@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <Header></Header>
-      <Left></Left>
+      {/* <Left></Left> */}
       <Routes>                                              {/** Route를 이용하여 경로 별 Component 설정**/}
         <Route path='/demo/' element={<Payment />} />
         <Route path='/demo/ready' element={<Ready />} />         {/*결제 준비 API DEMO*/}

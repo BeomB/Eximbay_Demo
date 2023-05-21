@@ -23,7 +23,7 @@ const Payment = () => {
     headers: {
       "Content-Type": 'application/json',
       "Authorization": 'Basic dGVzdF9DMkZBMUY1ODQ4OUMxNTg0MTk5Qjo='
-    }  
+    }
   };
 
   /// fgkey
@@ -223,6 +223,22 @@ const Payment = () => {
         settings
       }
     );
+  }
+
+  const objectCopy = () => {
+    let copyText = JSON.stringify({
+      fgkey,
+      payment,
+      merchant,
+      url,
+      buyer,
+      tax,
+      other_param,
+      product,
+      surcharge,
+      settings
+    }, null, 2)
+    navigator.clipboard.writeText(copyText)
   }
 
 
@@ -669,9 +685,13 @@ const Payment = () => {
 
         {/** other_param **/}
 
-        <label id="objectName" type="button" data-bs-toggle="collapse" data-bs-target="#otherCollapse" aria-expanded="false" aria-controls="collapseExample">
-          ▼ JSON FORMAT
-        </label><br /><br />
+        <Button id="objectPreview" data-bs-toggle="collapse" data-bs-target="#otherCollapse" aria-expanded="false" aria-controls="collapseExample">
+          미리보기
+        </Button>
+
+        <Button id="objectCopy" onClick={objectCopy}>
+          Json 복사
+        </Button><br /><br />
 
         <div className="collapse" id="otherCollapse">
           <div className="json_preview">
