@@ -18,6 +18,8 @@
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
 body{
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -39,16 +41,30 @@ body{
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-.nav_area .link
+.nav_area .test_link
 {
   font-family: 'Noto Sans KR', sans-serif;
-  color: #1d1f28;
+  color: #224bff;
   text-decoration: none;
   font-size: 14px;
   height: 100%;
   font-weight: 600;
   margin-right: 30px;
 }
+
+
+
+.nav_area .real_link
+{
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #ff3939;
+  text-decoration: none;
+  font-size: 14px;
+  height: 100%;
+  font-weight: 900;
+  margin-right: 30px;
+}
+
 
 .accordion-body input
 {
@@ -93,7 +109,6 @@ body{
 .header{
   display: flex;
   color : white;
-  margin-left: 30px;
   height: 60px;
   border-bottom: 0.8px solid #c5c3c3;
   background-color: #ffffff;
@@ -103,6 +118,8 @@ body{
 
 .header div{
   display: inline;
+  width: 100%;
+  text-align: center;
   margin-top: 1%;
 }
 /* .nav_area
@@ -158,7 +175,9 @@ body{
   height: 800px;
   color :#071025;
   border-radius: 20px !important;
-  background-color: #ffffff !important;
-  
-  
+  background-color: #ffffff !important; 
+}
+
+.real_header{
+  color: red;
 }

@@ -496,7 +496,7 @@ const Payment = () => {
                     {/** email **/}
                     <div className="mb-3">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">email</label>
-                      <input type="text" className="form-control" name='name' onChange={buyerValueHandler} value={buyer.email || ""} />
+                      <input type="text" className="form-control" name='email' onChange={buyerValueHandler} value={buyer.email || ""} />
                     </div>
                   </div>
                 </div>
