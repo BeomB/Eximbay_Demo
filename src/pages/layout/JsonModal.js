@@ -1,6 +1,7 @@
 import Modal from 'react-modal'
 import React from 'react'
 import { Button } from 'react-bootstrap'
+import { useEffect } from 'react'
 // import Qlogo from '../image/Qlogo.png'
 
 Modal.setAppElement("#root")
@@ -10,14 +11,18 @@ const JsonModal = (props) => {
     const objectCopy = () => {
 
         let copyText = JSON.stringify({
-            props
+            jsonObject
         }, null, 2)
         navigator.clipboard.writeText(copyText);
-        alert("1")
+        alert("복사 완료")
     }
 
+    useEffect(() => {
+      console.log(props.jsonObject)
+    }, [])
+    
 
-    const jsonObject = props.name
+    const jsonObject = props.jsonObject
 
     return (
         <div className='modal'>
@@ -30,7 +35,7 @@ const JsonModal = (props) => {
                     <br/>
                     <pre>
                         {JSON.stringify({
-                            props
+                            jsonObject
                         }, null, 2)}<br />
                     </pre>
                     <Button style={{ marginRight: "10px", width: "8%" }} onClick={props.closeModal}>닫기</Button>

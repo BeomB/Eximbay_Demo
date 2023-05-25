@@ -701,7 +701,7 @@ const Payment = () => {
         </div>
       </div>
 
-      {showModal ? <JsonModal openModal={openModal} name= {paymentObject} closeModal={closeModal}></JsonModal> : null}
+      {showModal ? <JsonModal openModal={openModal} jsonObject= {paymentObject} closeModal={closeModal}></JsonModal> : null}
 
     </>
 

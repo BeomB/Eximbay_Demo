@@ -19,14 +19,14 @@ const Header = () => {
                     <div><Link to="/test/capture" className="test_link">수동매입</Link></div>
                 </div>
 
-                <div className="real_header">
+                {/* <div className="real_header">
                     <div><Link to="/real/payment" className="real_link">결제</Link></div>
                     <div><Link to="/real/cancel" className="real_link">결제 취소</Link></div>
                     <div><Link to="/real/confirm" className="real_link">결제 승인</Link></div>
                     <div><Link to="/real/retrieve" className="real_link">결제 조회</Link></div>
                     <div><Link to="/real/verify" className="real_link">결제 검증</Link></div>
                     <div><Link to="/real/capture" className="real_link">수동매입</Link></div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -5,11 +5,12 @@ import JsonModal from './layout/JsonModal';
 
 const Cancel = () => {
 
-  const mid = "1849705C64";
-  const transid = "transid123";
+  
+  const [mid, setMid] = useState("1849705C64")
+  const [transid, setTransid] = useState("transid123")
 
   ///   결제 준비 요청 URL
-  let readyUrl = `https://api-test.eximbay.com/v1/payments/${transid}/cancel`
+  const readyUrl = `https://api-test.eximbay.com/v1/payments/${transid}/cancel`
 
   ///   헤더 값, Postman : Headers 값
   const Headers = {
@@ -20,7 +21,6 @@ const Cancel = () => {
   };
 
   /// domain
-  const domain = "TEST"
 
   const domainValueHandler = (e) => {
     if (e.target.value === "TEST") {
@@ -66,6 +66,17 @@ const Cancel = () => {
 
   }))
 
+
+  const transIdValueHandler = (e) =>
+  {
+    setTransid(e.target.value)
+  }
+
+  const midValueHandler = (e) =>
+  {
+    setMid(e.target.value)
+  }
+
   const refundValueHandler = (e) => {
     setRefund(
       {
@@ -90,7 +101,9 @@ const Cancel = () => {
     Axios.post(readyUrl, cancelObject, Headers)   // Axios를 통해 앞서 설정한 Url, confirmBody, Headers설정을 받아서 Post 요청 진행
       .then((res) => {
         // setFgkey(() => res.data.fgkey)          // res는 axios 요청 이후 엑심베이에서 응답 주는 값, res.data.fgkey는 결제 준비 응닶 fgkey 값  
-        console.log(res.data);
+        alert(JSON.stringify(
+          res.data
+      , null, 2))
       })
       .catch(err => {
         console.log(err.response.data.message);
@@ -122,6 +135,7 @@ const Cancel = () => {
           <div className='left'>
             <br />
             <h2 className="title">취소</h2><br />
+            <b>POST</b>/v1/payments/<b>{transid}</b>/cancel<br /><br />
             <Button style={{ marginRight: "10px" }} onClick={cancel}>거래 취소</Button>
             <Button style={{ marginRight: "10px" }} id="objectPreview" onClick={ObjectPreview}> 미리보기 </Button> <br /><br />
 
@@ -147,13 +161,13 @@ const Cancel = () => {
                     {/** order_id **/}
                     <div className="mb-3">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">transid</label>
-                      <input type="text" className="form-control" name='mid' onChange={paymentValueHandler} value={mid || ""} />
+                      <input type="text" className="form-control" name='transid' onChange={transIdValueHandler} value={transid || ""} />
                     </div>
 
                     {/** order_id **/}
                     <div className="mb-3">
-                      <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">order_id</label>
-                      <input type="text" className="form-control" name='order_id' onChange={paymentValueHandler} value={payment.order_id || ""} />
+                      <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">mid</label>
+                      <input type="text" className="form-control" name='mid' onChange={midValueHandler} value={mid || ""} />
                     </div>
                   </div>
                 </div>
@@ -253,8 +267,6 @@ const Cancel = () => {
                     <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">reason</label>
                     <input type="text" className="form-control" name='reason' onChange={paymentValueHandler} value={refund.reason || ""} />
                   </div>
-
-                 
                 </div>
               </div>
             </div>
@@ -262,7 +274,7 @@ const Cancel = () => {
         </div>
       </div>
 
-      {showModal ? <JsonModal openModal={openModal} name={cancelObject} closeModal={closeModal}></JsonModal> : null}
+      {showModal ? <JsonModal openModal={openModal} jsonObject={cancelObject} closeModal={closeModal}></JsonModal> : null}
 
     </>
 
