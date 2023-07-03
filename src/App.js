@@ -11,13 +11,15 @@ import Header from './pages/layout/Header'
 import Payment from './pages/Payment'
 import Iframe from './pages/Iframe'
 import SdkButton from './pages/SdkButton'
+import JsonPayment from './pages/JsonPayment'
+import Boo from './pages/Boo'
 
 
 
 const App = () => {
   return (
     <>
-      <Header></Header>
+      {/* <Header></Header> */}
 
       <Routes>                                              {/** Route를 이용하여 경로 별 Component 설정**/}
         <Route path='/test/' element={<Payment />} />
@@ -31,6 +33,8 @@ const App = () => {
         <Route path='/test/payment' element={<Payment />} />     {/*결제 API DEMO*/}
         <Route path='/test/iframe' element={<Iframe />} />     {/*결제 API DEMO*/}
         <Route path='/test/sdk' element={<SdkButton />} />     {/*결제 API DEMO*/}
+        <Route path='/test/json' element={<JsonPayment />} />     {/*결제 API DEMO*/}
+        <Route path='/boo' element={<Boo />} />     {/*결제 API DEMO*/}
 
       </Routes>
     </>

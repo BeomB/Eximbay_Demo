@@ -8,12 +8,7 @@ const Payment = () => {
 
 
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://api-test.eximbay.com/v1/javascriptSDK.js";
-    script.id = "sdkDomain"
-    document.head.appendChild(script);
-  }, []);
+  
 
   ///   결제 준비 요청 URL
   let readyUrl = "https://api-test.eximbay.com/v1/payments/ready"
@@ -36,13 +31,14 @@ const Payment = () => {
     if (e.target.value === "TEST") {
       const script = document.createElement("script");
       script.src = "https://api-test.eximbay.com/v1/javascriptSDK.js";
+      // script.src = "https://api-test.eximbay.com/test/javascriptSDK_FOR_DEVELOPER.js";
       script.id = "sdkDomain"
       document.head.appendChild(script);
       console.log(script.src)
 
     } else if (e.target.value === "REAL") {
       const script = document.createElement("script");
-      script.src = "https://api.eximbay.com/v1/javascriptSDK.js";
+      // script.src = "https://api.eximbay.com/v1/javascriptSDK.js";
       script.id = "sdkDomain"
       document.head.appendChild(script);
       console.log(script.src)
@@ -426,7 +422,8 @@ const Payment = () => {
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">mid</label>
                       <select className="form-select" name='mid' onChange={merchantValueHandler} value={merchant.mid || ""} >
                         <option value="1849705C64">가맹점 연동용 ( TEST - 1849705C64 )</option>
-                        <option value="3474153615">Eximbay_live ( REAL - 3474153615 )</option>
+                        <option value="2C233AB5EB">SSG_TEST ( TEST - 2C233AB5EB )</option>
+                        <option value="3474153615">Eximbay_live ( REAL - 3474153615 )</option>                        
                       </select>
                       {/* <input type="text" className="form-control" name='transaction_type' onChange={merchantValueHandler} value={merchant.mid || ""} /> */}
                     </div>

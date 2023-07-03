@@ -17,6 +17,7 @@ const Header = () => {
                     <div><Link to="/test/retrieve" className="test_link">결제 조회</Link></div>
                     <div><Link to="/test/verify" className="test_link">결제 검증</Link></div>
                     <div><Link to="/test/capture" className="test_link">수동매입</Link></div>
+                    <div><Link to="/test/capture" className="test_link">수동매입</Link></div>
                 </div>
 
                 {/* <div className="real_header">

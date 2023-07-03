@@ -5,7 +5,7 @@ import JsonModal from './layout/JsonModal';
 
 const Cancel = () => {
 
-  
+
   const [mid, setMid] = useState("1849705C64")
   const [transid, setTransid] = useState("transid123")
 
@@ -67,13 +67,11 @@ const Cancel = () => {
   }))
 
 
-  const transIdValueHandler = (e) =>
-  {
+  const transIdValueHandler = (e) => {
     setTransid(e.target.value)
   }
 
-  const midValueHandler = (e) =>
-  {
+  const midValueHandler = (e) => {
     setMid(e.target.value)
   }
 
@@ -103,7 +101,7 @@ const Cancel = () => {
         // setFgkey(() => res.data.fgkey)          // res는 axios 요청 이후 엑심베이에서 응답 주는 값, res.data.fgkey는 결제 준비 응닶 fgkey 값  
         alert(JSON.stringify(
           res.data
-      , null, 2))
+          , null, 2))
       })
       .catch(err => {
         console.log(err.response.data.message);
@@ -259,13 +257,13 @@ const Cancel = () => {
                   {/** refund_id **/}
                   <div className="mb-3">
                     <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">refund_id</label>
-                    <input type="text" className="form-control" name='refund_id' onChange={paymentValueHandler} value={refund.refund_id || ""} />
+                    <input type="text" className="form-control" name='refund_id' onChange={refundValueHandler} value={refund.refund_id || ""} />
                   </div>
 
                   {/** reason **/}
                   <div className="mb-3">
                     <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">reason</label>
-                    <input type="text" className="form-control" name='reason' onChange={paymentValueHandler} value={refund.reason || ""} />
+                    <input type="text" className="form-control" name='reason' onChange={refundValueHandler} value={refund.reason || ""} />
                   </div>
                 </div>
               </div>
