@@ -10,8 +10,6 @@ const JsonModal = (props) => {
 
     const objectCopy = () => {
 
-        console.log(jsonObject)
-
         let copyText = JSON.stringify({
             jsonObject
         }, null, 2)
@@ -33,7 +31,7 @@ const JsonModal = (props) => {
                 isOpen={props.openModal}
                 onRequestClose={props.closeModal}
             >
-                <div className='modalItem'>
+                <div className='modal-content'>
                     <br/>
                     <pre>
                         {JSON.stringify({
