@@ -10,6 +10,8 @@ const JsonModal = (props) => {
 
     const objectCopy = () => {
 
+        console.log(jsonObject)
+
         let copyText = JSON.stringify({
             jsonObject
         }, null, 2)

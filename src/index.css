@@ -1,23 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
-
-.left
-{
-  padding-left: 5%;
-  float: left;
-  width: 50%;
-  padding-right: 3%;
-}
-
-.right
-{
-  margin-top: 13.5%;
-  padding-right: 5%;
-  float: left;
-  width: 50%;
-  padding-left: 3%;
-}
-
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
 
 body{
@@ -179,4 +160,74 @@ body{
 
 .real_header{
   color: red;
+}
+
+
+ /* 공통 스타일 */
+ .container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left_layout{
+margin: 10px;
+}
+.center_layout{
+margin: 10px;
+}
+.right_layout{
+margin: 10px;
+}
+
+.parameter
+{
+  margin-bottom: 10px;
+}
+
+.parameter input
+{
+  width: 100px;
+  border: none;
+  border-bottom: 0.1px solid #f1f1f1;
+  outline: none;
+}
+
+
+.parameter select
+{
+  text-align: center;
+  font-size: 15px;
+  width: 150px;
+  border: none;
+  border-bottom: 0.1px solid #f1f1f1;
+  outline: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 2px 20px 2px 2px;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+}
+
+/* 모바일 스타일 */
+@media screen and (max-width: 767px) {
+.left_layout, .center_layout, .right_layout {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+/* PC 스타일 */
+@media screen and (min-width: 768px) {
+  .left_layout, .center_layout, .right_layout {
+      width: 31%;
+      float: left;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      border: 1px solid #bbbec4;
+      
+  }
 }

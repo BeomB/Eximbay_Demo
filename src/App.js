@@ -19,7 +19,7 @@ import Boo from './pages/Boo'
 const App = () => {
   return (
     <>
-      {/* <Header></Header> */}
+      <Header></Header>
 
       <Routes>                                              {/** Route를 이용하여 경로 별 Component 설정**/}
         <Route path='/test/' element={<Payment />} />
