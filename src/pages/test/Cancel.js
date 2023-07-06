@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 import { Button } from 'react-bootstrap'
-import JsonModal from './layout/JsonModal';
+import JsonModal from '../layout/JsonModal';
 
 const Cancel = () => {
-
 
   const [mid, setMid] = useState("1849705C64")
   const [transid, setTransid] = useState("transid123")
@@ -279,4 +278,3 @@ const Cancel = () => {
   )
 }
 export default Cancel
-

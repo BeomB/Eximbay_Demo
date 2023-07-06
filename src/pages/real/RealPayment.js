@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 import { Button } from 'react-bootstrap'
-import JsonModal from './layout/JsonModal';
+import JsonModal from '../layout/JsonModal';
 
-const Payment = () => {
+const RealPayment = () => {
 
-
-
-
-
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://api.eximbay.com/v1/javascriptSDK.js";
+    script.id = "sdkDomain"
+    document.head.appendChild(script);
+  }, [])
+  
 
   ///   결제 준비 요청 URL
-  let readyUrl = "https://api-test.eximbay.com/v1/payments/ready"
+  let readyUrl = "https://api.eximbay.com/v1/payments/ready"
 
   ///   헤더 값, Postman : Headers 값
   const Headers = {
@@ -43,7 +46,7 @@ const Payment = () => {
   }
 
   const [merchant, setMerchant] = useState(() => ({
-    mid: "1849705C64"
+    mid: "3474153615"
   }))
 
   const merchantValueHandler = (e) => {
@@ -233,18 +236,18 @@ const Payment = () => {
 
   return (
     <>
+    
       <div className="main">
         <div className="form">
-          <div className='left_layout'>
-            <br />
-            <h4 className="title">Payment</h4><br />
+        <div className='top_layout'>
+        <h4 className="title">REAL - Payment</h4><br />
             <Button style={{ marginRight: "8px" }} onClick={ready}>fgkey 생성</Button>
             <Button style={{ marginRight: "8px" }} onClick={callSDK}>SDK 호출</Button>
-            <Button style={{ marginRight: "8px" }} id="objectPreview" onClick={ObjectPreview}> 미리보기 </Button> <br /><br />
-
+            <Button style={{ marginRight: "8px" }} id="objectPreview" onClick={ObjectPreview}> 미리보기 </Button> <br /><br />        
             {/** ------------- fgkey ------------ **/}
-            <label htmlFor="exampleFormControlInput1" className="form-label" id="fgkey">fgkey : {fgkey}</label>
-
+            <label htmlFor="exampleFormControlInput1" className="form-label" id="fgkey">fgkey: {fgkey}</label>
+          </div>
+          <div className='left_layout'>
             {/** ------------- Payment ------------ **/}
             <div className="accordion mb-2">
               <div className="accordion-item">
@@ -391,9 +394,7 @@ const Payment = () => {
                     <div className="mb-3">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">mid</label>
                       <select className="form-select" name='mid' onChange={merchantValueHandler} value={merchant.mid || ""} >
-                        <option value="1849705C64">가맹점 연동용 ( TEST - 1849705C64 )</option>
-                        <option value="2C233AB5EB">SSG_TEST ( TEST - 2C233AB5EB )</option>
-                        <option value="3474153615">Eximbay_live ( REAL - 3474153615 )</option>
+                      <option value="3474153615">Eximbay_live ( REAL - 3474153615 )</option>
                       </select>
                       {/* <input type="text" className="form-control" name='transaction_type' onChange={merchantValueHandler} value={merchant.mid || ""} /> */}
                     </div>
@@ -430,14 +431,14 @@ const Payment = () => {
                   <div className="accordion-body">
                     {/** return_url **/}
                     <div className="mb-3">
-                      <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">return_url</label>
-                      <input type="text" className="form-control" name='return_url' onChange={urlValueHandler} value={url.return_url || ""} />
+                      <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">return_url</label><br/>
+                      <input type="text" className="form-control" name='return_url' id="url_form-control" onChange={urlValueHandler} value={url.return_url || ""} />
                     </div>
 
                     {/** status_url **/}
                     <div className="mb-3">
-                      <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">status_url</label>
-                      <input type="text" className="form-control" name='status_url' onChange={urlValueHandler} value={url.status_url || ""} />
+                      <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">status_url</label><br/>
+                      <input type="text" className="form-control" name='status_url' id="url_form-control" onChange={urlValueHandler} value={url.status_url || ""} />
                     </div>
                   </div>
                 </div>
@@ -510,11 +511,9 @@ const Payment = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <br />
-          <div className="right_layout">
-            {/** ------------- other_param ------------ **/}
-            <div className="accordion mb-2">
+            
+             {/** ------------- other_param ------------ **/}
+             <div className="accordion mb-2">
               <div className="accordion-item">
                 <h2 className="accordion-header" id="headingParam">
                   <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseParam" aria-expanded="false" aria-controls="collapseParam">
@@ -538,8 +537,8 @@ const Payment = () => {
                 </div>
               </div>
             </div>
-
-
+          </div>
+          <div className="right_layout">
             {/** ------------- product ------------ **/}
             <div className="accordion mb-2">
               <div className="accordion-item">
@@ -677,26 +676,5 @@ const Payment = () => {
 
   )
 }
-export default Payment
+export default RealPayment
 
-
-{/* <div className="preview">
-        <div className="collapse" id="otherCollapse">
-          <div className="json_preview">
-            <pre>
-              {JSON.stringify({
-                fgkey,
-                payment,
-                merchant,
-                url,
-                buyer,
-                tax,
-                other_param,
-                product,
-                surcharge,
-                settings
-              }, null, 2)}<br /><br /><br /><br />
-            </pre>
-          </div>
-        </div>
-      </div> */}
