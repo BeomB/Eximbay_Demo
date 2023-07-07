@@ -22,7 +22,7 @@ const JsonModal = (props) => {
     }, [])
     
 
-    const jsonObject = props.jsonObject
+    const jsonObject = props['jsonObject']
 
     return (
         <div className='modal'>

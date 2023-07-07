@@ -20,7 +20,7 @@ const RealPayment = () => {
   const Headers = {
     headers: {
       "Content-Type": 'application/json',
-      "Authorization": 'Basic dGVzdF9DMkZBMUY1ODQ4OUMxNTg0MTk5Qjo='
+      "Authorization": 'Basic bGl2ZV8zNDc0MTUzNjE1NTI5MzY4NUFDMjo='
     }
   };
 
@@ -240,7 +240,7 @@ const RealPayment = () => {
       <div className="main">
         <div className="form">
         <div className='top_layout'>
-        <h4 className="title">REAL - Payment</h4><br />
+        <h4 className="title"> <b style={{color: "red"}}>REAL - </b>Payment </h4><br />
             <Button style={{ marginRight: "8px" }} onClick={ready}>fgkey 생성</Button>
             <Button style={{ marginRight: "8px" }} onClick={callSDK}>SDK 호출</Button>
             <Button style={{ marginRight: "8px" }} id="objectPreview" onClick={ObjectPreview}> 미리보기 </Button> <br /><br />        
@@ -259,7 +259,7 @@ const RealPayment = () => {
                 <div id="collapsePayment" className="accordion-collapse collapse show" aria-labelledby="headingPayment" data-bs-parent="#accordionPayment">
                   <div className="accordion-body">
                     {/** transaction_type **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">transaction_type</label>
                       <select className="form-select" name='transaction_type' onChange={paymentValueHandler} value={payment.transaction_type} >
                         <option value="PAYMENT">PAYMENT</option>
@@ -269,13 +269,13 @@ const RealPayment = () => {
                     </div>
 
                     {/** order_id **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">order_id</label>
                       <input type="text" className="form-control" name='order_id' onChange={paymentValueHandler} value={payment.order_id || ""} />
                     </div>
 
                     {/** currency **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">currency</label>
                       <select className="form-select" name='currency' onChange={paymentValueHandler} value={payment.currency || ""} >
                         <option value="USD">USD</option>
@@ -284,13 +284,13 @@ const RealPayment = () => {
                     </div>
 
                     {/** amount **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">amount</label>
                       <input type="text" className="form-control" name='amount' onChange={paymentValueHandler} value={payment.amount || ""} />
                     </div>
 
                     {/** lang **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">lang</label>
                       <select className="form-select" name='lang' onChange={paymentValueHandler} value={payment.lang || ""} >
                         <option value="KR">KR</option>
@@ -299,7 +299,7 @@ const RealPayment = () => {
                     </div>
 
                     {/** payment_method **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" >payment_method</label>
                       <select className="form-select" name='payment_method' onChange={paymentValueHandler} value={payment.payment_method || ""} >
                         <option value="">전체</option>
@@ -369,7 +369,7 @@ const RealPayment = () => {
 
                     {/** multi_payment_method 필수 X **/}
 
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" >multi_payment_method</label>
                       <input type="text" className="form-control" name='multi_payment_method' onChange={paymentValueHandler} value={payment.multi_payment_method || ""} />
                     </div>
@@ -391,7 +391,7 @@ const RealPayment = () => {
                   <div className="accordion-body">
 
                     {/** mid **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">mid</label>
                       <select className="form-select" name='mid' onChange={merchantValueHandler} value={merchant.mid || ""} >
                       <option value="3474153615">Eximbay_live ( REAL - 3474153615 )</option>
@@ -400,13 +400,13 @@ const RealPayment = () => {
                     </div>
 
                     {/** shop **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label">shop</label>
                       <input type="text" className="form-control" name='shop' onChange={merchantValueHandler} value={merchant.shop || ""} />
                     </div>
 
                     {/** partner_code **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label">partner_code</label>
                       <input type="text" className="form-control" name='partner_code' onChange={merchantValueHandler} value={merchant.partner_code || ""} />
                     </div>
@@ -430,13 +430,13 @@ const RealPayment = () => {
                 <div id="collapseUrl" className="accordion-collapse collapse show" aria-labelledby="headingUrl" data-bs-parent="#accordionUrl">
                   <div className="accordion-body">
                     {/** return_url **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">return_url</label><br/>
                       <input type="text" className="form-control" name='return_url' id="url_form-control" onChange={urlValueHandler} value={url.return_url || ""} />
                     </div>
 
                     {/** status_url **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">status_url</label><br/>
                       <input type="text" className="form-control" name='status_url' id="url_form-control" onChange={urlValueHandler} value={url.status_url || ""} />
                     </div>
@@ -455,17 +455,17 @@ const RealPayment = () => {
                   <div className="accordion-body">
 
                     {/** name **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">name</label>
                       <input type="text" className="form-control" name='name' onChange={buyerValueHandler} value={buyer.name || ""} />
                     </div>
                     {/** phone_number 필수 X **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label">phone_number</label>
                       <input type="text" className="form-control" name='phone_number' onChange={buyerValueHandler} value={buyer.phone_number || ""} />
                     </div>
                     {/** email **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">email</label>
                       <input type="text" className="form-control" name='email' onChange={buyerValueHandler} value={buyer.email || ""} />
                     </div>
@@ -485,25 +485,25 @@ const RealPayment = () => {
                 <div id="collapseTax" className="accordion-collapse collapse " aria-labelledby="headingTax" data-bs-parent="#accordionTax">
                   <div className="accordion-body">
                     {/** amount_tax_free **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" >amount_tax_free</label>
                       <input type="text" className="form-control" name='amount_tax_free' onChange={taxValueHandler} value={tax.amount_tax_free || ""} />
                     </div>
 
                     {/** amount_taxable **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" >amount_taxable</label>
                       <input type="text" className="form-control" name='amount_taxable' onChange={taxValueHandler} value={tax.amount_taxable || ""} />
                     </div>
 
                     {/** amount_vat **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" >amount_vat</label>
                       <input type="text" className="form-control" name='amount_vat' onChange={taxValueHandler} value={tax.amount_vat || ""} />
                     </div>
 
                     {/** amount_service_fee **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" >amount_service_fee</label>
                       <input type="text" className="form-control" name='amount_service_fee' onChange={taxValueHandler} value={tax.amount_service_fee || ""} />
                     </div>
@@ -523,13 +523,13 @@ const RealPayment = () => {
                 <div id="collapseParam" className="accordion-collapse collapse" aria-labelledby="headingProduct" data-bs-parent="#accordionParam">
                   <div className="accordion-body">
                     {/** amount_tax_free **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">param1</label>
                       <input type="text" className="form-control" name='param1' onChange={paramValueHandler} value={other_param.param1 || ""} />
                     </div>
 
                     {/** amount_tax_free **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">param2</label>
                       <input type="text" className="form-control" name='param2' onChange={paramValueHandler} value={other_param.param2 || ""} />
                     </div>
@@ -550,25 +550,25 @@ const RealPayment = () => {
                 <div id="collapseProduct" className="accordion-collapse collapse show" aria-labelledby="headingTax" data-bs-parent="#accordionProduct">
                   <div className="accordion-body">
                     {/** product.name **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">name</label>
                       <input type="text" className="form-control" name='name' onChange={productValueHandler} value={product.name || ""} />
                     </div>
 
                     {/** product.quantity **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">quantity</label>
                       <input type="text" className="form-control" name='quantity' onChange={productValueHandler} value={product.quantity || ""} />
                     </div>
 
                     {/** product.unit_price **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">unit_price</label>
                       <input type="text" className="form-control" name='unit_price' onChange={productValueHandler} value={product.unit_price || ""} />
                     </div>
 
                     {/** product.link **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">link</label>
                       <input type="text" className="form-control" name='link' onChange={productValueHandler} value={product[0].link || ""} />
                     </div>
@@ -588,19 +588,19 @@ const RealPayment = () => {
                 <div id="collapseSurcharge" className="accordion-collapse collapse" aria-labelledby="headingSurcharge" data-bs-parent="#accordionSurcharge">
                   <div className="accordion-body">
                     {/** surcharge.name **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label">name</label>
                       <input type="text" className="form-control" name='name' onChange={surchargeValueHandler} value={surcharge.name || ""} />
                     </div>
 
                     {/** surcharge.quantity **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label">quantity</label>
                       <input type="text" className="form-control" name='quantity' onChange={surchargeValueHandler} value={surcharge.quantity || ""} />
                     </div>
 
                     {/** surcharge.unit_price **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label">unit_price</label>
                       <input type="text" className="form-control" name='unit_price' onChange={surchargeValueHandler} value={surcharge.unit_price || ""} />
                     </div>
@@ -621,44 +621,44 @@ const RealPayment = () => {
                 <div id="collapseSettings" className="accordion-collapse collapse show" aria-labelledby="headingSettings" data-bs-parent="#accordionSettings">
                   <div className="accordion-body">
                     {/** display_type **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">display_type</label>
                       <input type="text" className="form-control" name='display_type' onChange={settingsValueHandler} value={settings.display_type || ""} />
                     </div>
 
                     {/** autoclose **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">autoclose</label>
                       <input type="text" className="form-control" name='autoclose' onChange={settingsValueHandler} value={settings.autoclose || ""} />
                     </div>
 
                     {/** site_foreign_currency **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">site_foreign_currency</label>
                       <input type="text" className="form-control" name='site_foreign_currency' onChange={settingsValueHandler} value={settings.site_foreign_currency || ""} />
                     </div>
 
 
                     {/** call_from_app **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">call_from_app</label>
                       <input type="text" className="form-control" name='call_from_app' onChange={settingsValueHandler} value={settings.call_from_app || ""} />
                     </div>
 
                     {/** call_from_scheme **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">call_from_scheme</label>
                       <input type="text" className="form-control" name='call_from_scheme' onChange={settingsValueHandler} value={settings.call_from_scheme || ""} />
                     </div>
 
                     {/** issuer_country **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">issuer_country</label>
                       <input type="text" className="form-control" name='issuer_country' onChange={settingsValueHandler} value={settings.issuer_country || ""} />
                     </div>
 
                     {/** ostype **/}
-                    <div className="mb-3">
+                    <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">ostype</label>
                       <input type="text" className="form-control" name='ostype' onChange={settingsValueHandler} value={settings.ostype || ""} />
                     </div>
