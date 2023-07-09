@@ -12,7 +12,7 @@ const Header = () => {
             <div className="nav_area" >
 
                 <div className="test_header">
-                    <div className="test_link">TEST -</div>
+                    <div className="test_link_title">TEST</div>
                     <div ><Link to="/test/payment" className="test_link">결제</Link></div>
                     <div><Link to="/test/cancel" className="test_link">결제 취소</Link></div>
                     <div><Link to="/test/confirm" className="test_link">결제 승인</Link></div>
@@ -23,7 +23,7 @@ const Header = () => {
                 </div>
 
                 <div className="real_header">
-                    <div className="real_link">REAL -</div>
+                    <div className="real_link_title">REAL</div>
                     <div><Link to="/real/payment" className="real_link">결제</Link></div>
                     <div><Link to="/real/cancel" className="real_link">결제 취소</Link></div>
                     <div><Link to="/real/confirm" className="real_link">결제 승인</Link></div>
