@@ -34,7 +34,7 @@ body{
   /* color: #224bff; */
   color: #0d0d0e;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   height: 100%;
   font-weight: 600;
   margin-right: 1vw;
@@ -45,10 +45,11 @@ body{
   color: #224bff;
   font-family: 'Noto Sans KR', sans-serif;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   height: 100%;
   font-weight: 600;
   margin-right: 1vw;
+  margin-left: 30px;
 }
 
 
@@ -58,7 +59,7 @@ body{
   /* color: #ff3939; */
   color: #0d0d0e;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   height: 100%;
   font-weight: 900;
   margin-right: 1vw;
@@ -69,7 +70,7 @@ body{
   color: #ff3939;
   font-family: 'Noto Sans KR', sans-serif;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   height: 100%;
   font-weight: 600;
   margin-right: 1vw;
@@ -80,7 +81,7 @@ body{
   margin-left: 20px;
   width: 120px;
   margin-right: 50px !important;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .accordion-button 
@@ -102,7 +103,7 @@ body{
 #fgkey{
   color: coral;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   margin-top: 10px;
   width: 50vw;
 }
@@ -121,10 +122,14 @@ body{
   white-space: nowrap;
 }
 
+.test_header
+{
+  margin-left: 40px;
+}
+
 .header div{
   display: inline;
   width: 100%;
-  text-align: center;
   margin-top: 1%;
 }
 /* .nav_area
@@ -245,4 +250,20 @@ body{
 .accordion mb-2
 {
   margin-right: 0px !important;
+}
+
+
+.accordion-button{
+  background-color: #FFFFFF !important;
+  color: black !important;
+  font-weight :900  !important;
+  height: 45px !important;
+}
+.form-select, .form-control{
+  height: 33px;
+  width: 200px !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  display: inline !important;
+  margin-left: 1%;
 }

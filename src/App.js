@@ -26,7 +26,7 @@ const App = () => {
       <Header></Header>
 
       <Routes>                                              {/** Route를 이용하여 경로 별 Component 설정**/}
-    
+        <Route path='/' element={<Payment />} />     {/*결제 API DEMO*/}
         <Route path='/test/ready' element={<Ready />} />         {/*결제 준비 API DEMO*/}
         <Route path='/test/confirm' element={<Confirm />} />     {/*결제 승인 API DEMO*/}
         <Route path='/test/verify' element={<Verify />} />       {/*결제 검증 API DEMO*/}
