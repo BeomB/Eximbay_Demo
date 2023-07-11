@@ -685,23 +685,6 @@ const Payment = () => {
 export default Payment
 
 
-{/* <div className="preview">
-        <div className="collapse" id="otherCollapse">
-          <div className="json_preview">
-            <pre>
-              {JSON.stringify({
-                fgkey,
-                payment,
-                merchant,
-                url,
-                buyer,
-                tax,
-                other_param,
-                product,
-                surcharge,
-                settings
-              }, null, 2)}<br /><br /><br /><br />
-            </pre>
-          </div>
-        </div>
-      </div> */}
+
+
+
