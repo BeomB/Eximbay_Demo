@@ -393,10 +393,10 @@ const RealPayment = () => {
                     {/** mid **/}
                     <div className="mb-1">
                       <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">mid</label>
-                      <select className="form-select" name='mid' onChange={merchantValueHandler} value={merchant.mid || ""} >
+                      {/* <select className="form-select" name='mid' onChange={merchantValueHandler} value={merchant.mid || ""} >
                       <option value="3474153615">Eximbay_live ( REAL - 3474153615 )</option>
-                      </select>
-                      {/* <input type="text" className="form-control" name='transaction_type' onChange={merchantValueHandler} value={merchant.mid || ""} /> */}
+                      </select> */}
+                      <input type="text" className="form-control" name='transaction_type' onChange={merchantValueHandler} value={merchant.mid || ""} />
                     </div>
 
                     {/** shop **/}

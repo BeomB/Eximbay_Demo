@@ -397,11 +397,11 @@ const Payment = () => {
                       {/** mid **/}
                       <div className="mb-1">
                         <label htmlFor="exampleFormControlInput1" className="form-label" id="essential">mid</label>
-                        <select className="form-select" name='mid' onChange={merchantValueHandler} value={merchant.mid || ""} >
+                        {/* <select className="form-select" name='mid' onChange={merchantValueHandler} value={merchant.mid || ""} >
                           <option value="1849705C64">가맹점 연동용 ( TEST - 1849705C64 )</option>
                           <option value="2C233AB5EB">SSG_TEST ( TEST - 2C233AB5EB )</option>
-                        </select>
-                        {/* <input type="text" className="form-control" name='transaction_type' onChange={merchantValueHandler} value={merchant.mid || ""} /> */}
+                        </select> */}
+                        <input type="text" className="form-control" name='transaction_type' onChange={merchantValueHandler} value={merchant.mid || ""} />
                       </div>
 
                       {/** shop **/}
