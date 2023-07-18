@@ -34,7 +34,7 @@ body{
   /* color: #224bff; */
   color: #0d0d0e;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   height: 100%;
   font-weight: 600;
   margin-right: 1vw;
@@ -45,7 +45,7 @@ body{
   color: #224bff;
   font-family: 'Noto Sans KR', sans-serif;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   height: 100%;
   font-weight: 600;
   margin-right: 1vw;
@@ -59,7 +59,7 @@ body{
   /* color: #ff3939; */
   color: #0d0d0e;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   height: 100%;
   font-weight: 900;
   margin-right: 1vw;
@@ -70,7 +70,7 @@ body{
   color: #ff3939;
   font-family: 'Noto Sans KR', sans-serif;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   height: 100%;
   font-weight: 600;
   margin-right: 1vw;
@@ -78,7 +78,7 @@ body{
 
 .accordion-body .form-label
 {
-  margin-left: 20px;
+  margin-left: 10px;
   width: 120px;
   margin-right: 50px !important;
   font-size: 13px;
@@ -86,18 +86,18 @@ body{
 
 .accordion-button 
 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
 }
 
 
 .title{
-  font-family: 'Average Sans', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
 }
 
 #root{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 #fgkey{
@@ -118,7 +118,6 @@ body{
   height: 60px;
   border-bottom: 0.8px solid #c5c3c3;
   background-color: #ffffff;
-  font-family: 'Roboto', sans-serif;
   white-space: nowrap;
 }
 
@@ -265,5 +264,14 @@ body{
   font-weight: 400 !important;
   font-size: 13px !important;
   display: inline !important;
-  margin-left: 1%;
+  margin-left: 0.7%;
+}
+
+
+#sdkButton, #fgkeyButton
+{
+
+  border-color: #000000 !important;
+  background-color: #000000 !important;
+
 }

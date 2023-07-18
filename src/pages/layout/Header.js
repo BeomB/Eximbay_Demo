@@ -8,7 +8,7 @@ const Header = () => {
         <div className='header'>
             <div className="nav_area" >
                 <div className="test_header">
-                <div><Link to="/"><img className="logo" style={{"width":"160px", "height" : "20px", "marginTop" :"-5px"}} src={logo} /></Link></div>
+                <div><Link to="/"><img className="logo" style={{"width":"181px", "height" : "21px", "marginTop" :"-10px"}} src={logo} /></Link></div>
                     <div className="test_link_title">TEST</div>
                     <div ><Link to="/test/payment" className="test_link">결제</Link></div>
                     <div><Link to="/test/cancel" className="test_link">결제 취소</Link></div>

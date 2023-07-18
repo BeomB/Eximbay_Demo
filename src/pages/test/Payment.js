@@ -243,8 +243,8 @@ const Payment = () => {
           
             <div className='top_layout'>
               <h4 className="title"> <b style={{ color: "blue" }}>TEST - </b>Payment </h4><br />
-              <Button className="info" onClick={ready}>fgkey 생성</Button>
-              <Button className="info" onClick={callSDK}>SDK 호출</Button>
+              <Button className="info" id="fgkeyButton"  onClick={ready}>fgkey 생성</Button>
+              <Button className="info" id="sdkButton"  onClick={callSDK}>SDK 호출</Button>
               <Button className="info" id="objectPreview" onClick={ObjectPreview}> 미리보기 </Button><br/>
               <label htmlFor="exampleFormControlInput1" className="form-label" id="fgkey">fgkey : {fgkey}</label>
               {/** ------------- fgkey ------------ **/}
