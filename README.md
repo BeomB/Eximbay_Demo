@@ -1,2 +1,1 @@
-{"code":"-11200","message":"SUCCESS","kakaopay_transaction_id":"AKNMT0f7f831005dd11eeab63f26d9e36he80","cashier_order_url":"281666040097Ph3h0dF9E1lebL9hJ21v3TTW","scheme_url":null,"app_link_url":null,"normal_url":"281666040097Ph3h0dF9E1lebL9hJ21v3TTW","app_identifier":null,"order_code_form":null,"payment_data":null,"created_at":"2023-06-08T18:15:50+09:00","custom_json":null}",
-    "input": {
+<img src="https://raw.githubusercontent.com/BeomB/MD/55c2a1d2fc4bebe9401db34efea4a4ec62696166/IMG/openAPI%20%EB%8D%B0%EB%AA%A8.png"  width="700" height="370">
